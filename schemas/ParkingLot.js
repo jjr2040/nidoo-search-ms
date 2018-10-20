@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
-const ObjectId = Schema.Types.ObjectId;
+// const ObjectId = Schema.Types.ObjectId;
 
 const parkingLotModel = new Schema({
     location: {
@@ -20,7 +20,7 @@ const parkingLotModel = new Schema({
     state: Number,
     vehicleType: String,
     isAvailable: Boolean,
-    owner: ObjectId
+    owner: String
 });
 
 module.exports = mongoose.model('ParkingLot', parkingLotModel);

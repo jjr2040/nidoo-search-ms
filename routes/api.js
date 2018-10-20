@@ -9,11 +9,12 @@ router
     const lng = parseFloat(req.query.lng) 
     const lat = parseFloat(req.query.lat);
     const limit = parseInt(req.query.limit);
+    const maxDistance = parseInt(req.query.maxDistance);
 
     ParkingLot.find({
         location: {
             $near: {
-                $maxDistance: 1000,
+                $maxDistance: maxDistance,
                 $geometry: {
                     type: "Point",
                     coordinates: [lng, lat]
