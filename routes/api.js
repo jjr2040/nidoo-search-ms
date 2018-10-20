@@ -25,7 +25,7 @@ router
         res.json(parkinglots);
     });
 })
-.post('/parkinglot', (req, res) => {
+.post('/parkinglots', (req, res) => {
     let parkinglot = new ParkingLot(req.body);
     parkinglot.save();
     res.status(201).send(parkinglot);
