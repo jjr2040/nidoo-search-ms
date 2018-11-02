@@ -2,7 +2,7 @@ const amqp = require('amqplib/callback_api');
 
 const q = 'booking';
 
-amqp.connect('amqp://localhost', (err, conn) => {
+amqp.connect('amqp://rabbit', (err, conn) => {
 
     console.log(err);
 
